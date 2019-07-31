@@ -52,14 +52,15 @@ We first preprocess the data by removing the stopwords, tokenizing, lemmatizig a
 We then match each of the words to a word ID and store them in a dictionary, shown as following<br/>
 ![lda_dic](https://user-images.githubusercontent.com/30851539/62176473-affd3880-b30f-11e9-8778-c5ae016c849c.png)
 
-Given the following example from the data set, we can count the number of times that each words occured in the sentence.
-[insert photo]
+Given the following example from the data set, we can count the number of times that each words occured in the sentence.<br/>
 
-Finally, we build the LDA model by choosing the number of topics. And it prints the 40 topics as below:
-[insert photo]
+Finally, we build the LDA model by choosing the number of topics. Here I made an "ansatz" that there are 40 distinct topics since there are 40 different categories associated to the dataset. The 40 topics are shown as below:<br/>
+![lda_topics](https://user-images.githubusercontent.com/30851539/62182495-c8c41900-b324-11e9-832e-036777988e36.png)
+
 As we can see, each topic is just a combination of words associated with different weights to show its significance.
 For the chosen example, its assigned topics are:<br/>
-[insert photo]
+![lda_example](https://user-images.githubusercontent.com/30851539/62182499-ccf03680-b324-11e9-9355-28fc098605be.png)
+
 We can then infer its topic may be "Police shoots and kills black lives".
 Here is a great visualization of LDA created by pyLDAvis library. Ideally, the topic bubble should not be overlapping. If the topics are too crowded, it may be an indicator that the number-of-topic parameter is set too high.<br/>
 ![lda_vis](https://user-images.githubusercontent.com/30851539/62178213-269d3480-b316-11e9-8547-7ba1ada5f74c.gif)
