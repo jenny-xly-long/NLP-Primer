@@ -61,6 +61,8 @@ As we can see, each topic is just a combination of words associated with differe
 For the chosen example, its assigned topics are:<br/>
 [insert photo]
 We can then infer its topic may be "Police shoots and kills black lives".
-Here is a great visualization of LDA created by pyLDAvis library. Ideally, the topic bubble should not be overlapping. If the topics are too crowded, it may be an indicator that the number-of-topic parameter is set too high.
+Here is a great visualization of LDA created by pyLDAvis library. Ideally, the topic bubble should not be overlapping. If the topics are too crowded, it may be an indicator that the number-of-topic parameter is set too high.<br/>
+![lda_vis](https://user-images.githubusercontent.com/30851539/62178213-269d3480-b316-11e9-8547-7ba1ada5f74c.gif)
+
 ### Event Extraction (EE)
 EE gathers knowledge about periodical incidents found in texts, automatically identifying information about what happed and when it happened. The amount of text generated daily are enormous. Being able to extract key information from a giant pool of data can help us be more efficient. For example, extracting events from business news aids users to perceive market trends, stay up to date with competitors' strategies and to make valuable investment decisioins.
