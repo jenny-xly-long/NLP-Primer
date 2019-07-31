@@ -105,17 +105,21 @@ Now let's perform name entity (NE) chunking to add more structure/name entity ta
 <br/>
 As seen in the "IOB Tag" row, the tagger mostly successfully picked up different name entities in the given text. We can then extract those with the NE tags as keywords. Using SpaCy's displacy visualization library, we get the following graph:
 
+![tagged_sentence](https://user-images.githubusercontent.com/30851539/62237415-e6ce5f80-b39e-11e9-8d78-d729bb03d219.gif)
+
 
 #### 2. Using TextRank
 
 <table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>0</th>      <th>1</th>      <th>2</th>      <th>3</th>      <th>4</th>      <th>5</th>      <th>6</th>      <th>7</th>      <th>8</th>      <th>9</th>      <th>10</th>      <th>11</th>      <th>12</th>      <th>13</th>      <th>14</th>    </tr>  </thead>  <tbody>    <tr>      <th>Keywords</th>      <td>kirwan</td>      <td>england</td>      <td>englands</td>      <td>italy</td>      <td>defeat</td>      <td>defeats</td>      <td>definitely</td>      <td>better</td>      <td>quietly</td>      <td>paterson</td>      <td>jonathan kaplan</td>      <td>sir</td>      <td>woodward</td>      <td>wooden spoon battle</td>      <td>flyhalf charlie hodgsons</td>    </tr>  </tbody></table>
 
-3. Using RAKE
-4. Unsupervised
-
-
-
 ![keyword_graph](https://user-images.githubusercontent.com/30851539/62189232-77278880-b33c-11e9-86e3-961c2761e02a.gif)
+
+#### 3. Using Rapid Automatic Keyword Extraction (RAKE)
+
+#### 4. Unsupervised
+
+
+
 
 ### Event Extraction (EE)
 EE gathers knowledge about periodical incidents found in texts, automatically identifying information about what happed and when it happened. The amount of text generated daily are enormous. Being able to extract key information from a giant pool of data can help us be more efficient. For example, extracting events from business news aids users to perceive market trends, stay up to date with competitors' strategies and to make valuable investment decisioins.
