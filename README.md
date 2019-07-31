@@ -59,7 +59,7 @@ TextRank can be implemented through Python's *summa* libray. For example, we tak
 <br/>
 
 Building on to of the TextRank idea, we can illustrate a keywords-relation graph using Liu's implementation (https://github.com/liuhuanyong/TextGrapher). The above text example result in the following text graph.
-![keyword_graph](https://user-images.githubusercontent.com/30851539/62189232-77278880-b33c-11e9-86e3-961c2761e02a.gif)
+![keyword_graph](https://user-images.githubusercontent.com/30851539/62246646-15096a80-b3b2-11e9-87e7-7781535f6929.gif)
 
 #### 3. Using Rapid Automatic Keyword Extraction (RAKE)
 
