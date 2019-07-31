@@ -52,10 +52,13 @@ We first preprocess the data by removing the stopwords, tokenizing, lemmatizig a
 We then match each of the words to a word ID and store them in a dictionary, shown as following<br/>
 ![lda_dic](https://user-images.githubusercontent.com/30851539/62176473-affd3880-b30f-11e9-8778-c5ae016c849c.png)
 
-Given the following example from the data set, we can count the number of times that each words occured in the sentence.<br/>
+Here is one example from the data set, we can see if any of the words in the dictionary occured in this sentence and we can count their number of occurrence.<br/>
+![lda_example](https://user-images.githubusercontent.com/30851539/62182800-fa89af80-b325-11e9-87f7-50afcd83aee7.png)
+![lda_example_words](https://user-images.githubusercontent.com/30851539/62182807-fd84a000-b325-11e9-9ad9-b9b8cba07be1.png)
 
-Finally, we build the LDA model by choosing the number of topics. Here I made an "ansatz" that there are 40 distinct topics since there are 40 different categories associated to the dataset. The 40 topics are shown as below:<br/>
-![lda_topics](https://user-images.githubusercontent.com/30851539/62182495-c8c41900-b324-11e9-832e-036777988e36.png)
+Finally, we build the LDA model by choosing the number of topics. Here I made an "ansatz" that there are 40 distinct topics since there are 40 different categories associated to the dataset. Some of the topics are shown as below:<br/>
+![lda_topics](https://user-images.githubusercontent.com/30851539/62182495-c8c41900-b324-11e9-832e-036777988e36.png)<br/>
+To aid visualization, I put the first 9 topics into wordclouds where the size of the word is proportionate to its weight/significance in the given sentence.
 
 As we can see, each topic is just a combination of words associated with different weights to show its significance.
 For the chosen example, its assigned topics are:<br/>
