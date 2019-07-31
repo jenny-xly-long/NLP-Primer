@@ -43,7 +43,8 @@ LDA considers each document as a collection of topics of different weights. And 
 **Example of LDA implementation:**
 LDA can be implemented using Sklean or gensim library. I am using gensim and wordnet on the News Category(attach link) dataset. Please see "lda.py" for detailed code. The goal here is to further understand LDA through some code and visualization.
 
-Here is a snapshot of the data set ![Head of News Category data set] (lda_data.png)
+Here is a snapshot of the data set<br/>
+![Head of News Category data set](https://user-images.githubusercontent.com/30851539/62175478-e8027c80-b30b-11e9-8a5b-3c86530a28ac.png)
 
 ### Event Extraction (EE)
 EE gathers knowledge about periodical incidents found in texts, automatically identifying information about what happed and when it happened. The amount of text generated daily are enormous. Being able to extract key information from a giant pool of data can help us be more efficient. For example, extracting events from business news aids users to perceive market trends, stay up to date with competitors' strategies and to make valuable investment decisioins.
