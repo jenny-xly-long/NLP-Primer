@@ -61,9 +61,7 @@ TextRank can be implemented through Python's *summa* libray. For example, we tak
 Building on to of the TextRank idea, we can illustrate a keywords-relation graph using Liu's implementation (https://github.com/liuhuanyong/TextGrapher). The above text example result in the following text graph.
 ![keyword_graph](https://user-images.githubusercontent.com/30851539/62246646-15096a80-b3b2-11e9-87e7-7781535f6929.gif)
 
-#### 3. Using Rapid Automatic Keyword Extraction (RAKE)
-
-#### 4. Unsupervised
+#### 3. Unsupervised
 
 
 
@@ -125,7 +123,7 @@ As we can see, each topic is just a combination of keywords. For the chosen exam
 We can then infer its topic may be "Police shoots and kills black lives".
 Here is a great visualization of LDA created by pyLDAvis library. Ideally, the topic bubble should not be overlapping. If the topics are too crowded, it may be an indicator that the number-of-topic parameter is set too high.<br/>
 
-![lda_vis](https://user-images.githubusercontent.com/30851539/62178213-269d3480-b316-11e9-8547-7ba1ada5f74c.gif)
+![lda_vis](https://user-images.githubusercontent.com/30851539/62246841-82b59680-b3b2-11e9-9d9d-1d59d25a94c7.gif)
 
 
 ### Event Extraction (EE)
