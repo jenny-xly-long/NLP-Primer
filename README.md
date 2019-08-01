@@ -79,14 +79,13 @@ LDA is a Bayesian model that uses Dirichlet priors to compute document-topic and
 ```
 LDA considers each document as a collection of topics of different weights. And each topic as a collection of keywords in a certain proportion. Therefore, from LDA's perspective, a topic is nothing but a collection of representative, dominant keywords. You can then infer the topic by looking at the collection of keywords. <br/>
 
-**Logic of LDA: <br/>**
-<code><pre>
-1. Specify the number of topics *N* to discover (note that this is a hyperparameter of the model that we need to fine tune)
+**Logic of LDA:**
+<code><pre>1. Specify the number of topics *N* to discover (note that this is a hyperparameter of the model that we need to fine tune)
 2. Randomly assign each word of the documents to one the the *N* topics.
 3. Compute the product of P(Topic *T* | Document *D*) [probability of documents *D* assigned to topic *T*] and P(Word *w* | Topic *T*)[probability of topic *T* assignment contributed by word *w*].
 4. Re-assign a new topic to each word according to the above result which represents the likelihood that topic *T* would generate word *w*.
-5. Repeat steps 3 and 4 until we reach a steady state where topics are assigned correctly according to the computed probability.
-</code></pre>
+5. Repeat steps 3 and 4 until we reach a steady state where topics are assigned correctly according to the computed probability.</code></pre>
+
 **Example of LDA implementation:**
 LDA can be implemented using Sklean or gensim library. I am using gensim and wordnet on the News Category(attach link) dataset. Please see "lda.py" for detailed code. The goal here is to further understand LDA through some code and visualization.
 
