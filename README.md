@@ -14,9 +14,10 @@ NER can automatically scan an entire article and reveal key personnels, organiza
 
 The techniques used to perform NER can be characterized in 3 different categories: rule based, feature based and neural based.
 #### 1. Rule based
-Since ruled based approach is not as often used in industry or in academia, I will not go into too much detail. They are usually used in some very domain specific problems where an exact set of rules and some smaller amount of supervised machine learning can be used to successfully recognized the given entity. For example, if we want to extract the email sender, email receiver and email content from the following string, we can do the following:
-<pre><code> Insert code block </code></pre>
-
+Since ruled based approach is not as often used in industry or in academia, I will not go into too much detail. They are usually used in some very domain specific problems where an exact set of rules and some smaller amount of supervised machine learning can be used to successfully recognized the given entity. For example, if we want to recognize the email **sender**, email **receiver** and email **content** from the following email string
+<pre><code> From: John Smith \n To: Jim Bob \n Hello Jim, I am writing to wish you a happy birthday. Best, John </code></pre>
+We can perform the following:
+<pre><code> insert code </code></pre>
 #### 2. Feature based 
 This approach is to extract features and train a Conditional Random Fields (CRF) sequence model of the same type as part-of-speech (POS) tagging.
 
@@ -80,7 +81,7 @@ LDA is a Bayesian model that uses Dirichlet priors to compute document-topic and
 LDA considers each document as a collection of topics of different weights. And each topic as a collection of keywords in a certain proportion. Therefore, from LDA's perspective, a topic is nothing but a collection of representative, dominant keywords. You can then infer the topic by looking at the collection of keywords. <br/>
 
 **Logic of LDA:**
-<code><pre>1. Specify the number of topics *N* to discover (note that this is a hyperparameter of the model that we need to fine tune)
+<pre><code>1. Specify the number of topics *N* to discover (note that this is a hyperparameter of the model that we need to fine tune)
 2. Randomly assign each word of the documents to one the the *N* topics.
 3. Compute the product of P(Topic *T* | Document *D*) [probability of documents *D* assigned to topic *T*] and P(Word *w* | Topic *T*)[probability of topic *T* assignment contributed by word *w*].
 4. Re-assign a new topic to each word according to the above result which represents the likelihood that topic *T* would generate word *w*.
