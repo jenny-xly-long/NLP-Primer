@@ -140,3 +140,5 @@ Here is a great visualization of LDA created by pyLDAvis library. Ideally, the t
 
 ### Event Extraction (EE)
 EE gathers knowledge about periodical incidents found in texts, automatically identifying information about what happed and when it happened. The amount of text generated daily are enormous. Being able to extract key information from a giant pool of data can help us be more efficient. For example, extracting events from business news aids users to perceive market trends, stay up to date with competitors' strategies and to make valuable investment decisioins.
+
+Let's take the following Google News dataset that I found here(insert link). 
