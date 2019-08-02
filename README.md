@@ -17,7 +17,16 @@ The techniques used to perform NER can be characterized in 3 different categorie
 Since ruled based approach is not as often used in industry or in academia, I will not go into too much detail. They are usually used in some very domain specific problems where an exact set of rules and some smaller amount of supervised machine learning can be used to successfully recognized the given entity. For example, if we want to recognize the email **sender**, email **receiver** and email **content** from the following email string
 <pre><code> From: John Smith \n To: Jim Bob \n Hello Jim, I am writing to wish you a happy birthday. Best, John </code></pre>
 We can perform the following:
-<pre><code> insert code </code></pre>
+<pre><code>import re
+sender = re.search(r'From:(.*?)\n', s).group(1) # Get strings between From: and \n
+receiver = re.search(r'To:(.*?)\n', s).group(1) # Get strings between To: and \n
+content = re.search(r'.*\n(.*)$',s).group(1) # Get strings after the last occurence of \n </code></pre>
+
+This will print:
+<pre><code>Sender:  John Smith  
+Receiver:  Jim Bob  
+Content:  Hello Jim, I am writing to wish you a happy birthday. Best, John </code></pre>
+
 #### 2. Feature based 
 This approach is to extract features and train a Conditional Random Fields (CRF) sequence model of the same type as part-of-speech (POS) tagging.
 
