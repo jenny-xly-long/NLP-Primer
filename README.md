@@ -157,3 +157,6 @@ Now to extract the event, we can pick out the "hero" story which is the article 
 
 As we can see, this technique was able to pick up articles talking about the same event. However, more fine-tuning is definitely needed since it classifies the presidential news in Zimbabwe and news related to President Donald Trump as the same event. And the "hero story" in this case is 
 <pre><code> U.S. President Donald Trump said on Monday that Japan would shoot North Korean missiles "out of the sky" if it bought the U.S. weaponry needed for doing so, suggesting Tokyo take a stance it has avoided until now.</code></pre>
+
+## Text Summarization
+
