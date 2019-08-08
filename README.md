@@ -159,4 +159,10 @@ As we can see, this technique was able to pick up articles talking about the sam
 <pre><code> U.S. President Donald Trump said on Monday that Japan would shoot North Korean missiles "out of the sky" if it bought the U.S. weaponry needed for doing so, suggesting Tokyo take a stance it has avoided until now.</code></pre>
 
 ## Text Summarization
-
+To illustrate how text summarization works, we will use the same news dataset as before.
+### 1. Extractive Summarization
+#### Feature based approach
+#### Graph based approach
+#### Topic representation approaches
+#### Knowledge bases and automatic summarization
+### 2. Abstractive Summarization
