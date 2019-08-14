@@ -4,7 +4,7 @@ In this document, I will discuss 4 fields in natural language processing:
 1. Information Extraction
 2. Text Summarization
 3. Machine Translation
-4. Semantic Analysis
+4. Text Mining
 
 ## Information Extraction
 Information extraction (IE) enables automated retrieval of specific information from text. IE depends on Name Entity Recognition to find targeted information to extract, such as LOCATION, PERSON, ORGANIZATION, etc. Once the entities are recognized, algorithms such as relationship extraction, co-reference resolution can then be used to extract its meaning.
@@ -172,3 +172,21 @@ Extractive summarization approach selects a subset of important sentences from t
 #### Topic representation approaches
 #### Knowledge bases and automatic summarization
 ### 2. Abstractive Summarization
+
+## Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)
+Machine translation is one of the oldest AI subfields. It refers to the task of automatically converting one natural language into another, preserving the meaning of the input text, and producing fluent text in the output language. 
+### 1. Rule based MT
+This is the primary research focus in 1970s. This approach consists of the following steps:
+```
+1. Converting the source text to a language-free conceptual representation.
+2. Augmenting this representation with information that was implicit in the source text.
+3. Converting previously augmented representation to the target language
+```
+
+### 2. Statistical based MT
+In most statistical approches, the most crucial component of the system is the phrase transition model. 
+
+### 3. Neural based MT
+
+## Opinion Mining
+Sentiment analysis is one of the most known subfields of opinion mining. It is widely applied to reviews, survey responses in domains ranging from marketing to clinical medicine. Different classifiers can be employed to perform sentiment analysis. More traditional methods include Naive Bayes, Support Vector Machine, etc. Currently, deep learning techniques perform the best on sentiment analysis.
