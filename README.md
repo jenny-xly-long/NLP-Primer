@@ -162,7 +162,8 @@ As we can see, this technique was able to pick up articles talking about the sam
 To illustrate how text summarization works, we will use the same news dataset as before.
 ### 1. Extractive Summarization (Allahyari et al., 2017)
 Extractive summarization approach selects a subset of important sentences from the original text. All summarizers perform the following 3 independent tasks:
-```1. Construct an intermediate representatoin of of the input text
+``` 
+1. Construct an intermediate representatoin of of the input text
 2. Score the sentences based on the representation
 3. Select a summary comprising of the key sentences based on highest scoring.
 ```
