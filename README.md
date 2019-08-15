@@ -6,13 +6,18 @@ In this document, I will discuss 4 fields in natural language processing:
 3. Machine Translation
 4. Text Mining
 
-Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. 
+Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The mean idea is to transform words into numerical representations so that a computer can read it. </br>
 **1. Dictionary** </br>
 This is a simple approach which essentially assign each word in a given training corpus to an integer. However, because of the ordinal value attached to each words, training models tend to assume that words associated with higher value have more importance which may lead to failure of the model.
 
 **2. One-Hot Encoding** </br>
-This method transforms each of the words in a given training corpus to a 1 x (N+1) dimensional vector, where N corresponds to the number of words in the corpus and the added 1 will be used to denote any words that are out of the training vocabulary. However, this method creates sparse matrix with huge dimensions which requires enormous computation power.
+This method transforms each of the words in a given training corpus to a 1 x (N+1) dimensional vector, where N corresponds to the number of words in the corpus and the added 1 will be used to denote any words that are out of the training vocabulary. However, this method creates sparse matrix with huge dimensions which requires enormous computation power. In addition, it does not take the semantic similarity of words into consideration.
 
+**3. Distributional Representation** </br>
+One of the most used example is TF-IDF(Term Frequency-Inverse Document Frequency). This method takes the context and the words appearing in the context into consideration. This way, each sentence/document is represented by a unique vector depending on the number of occurrences of each word in the sentences/documents.
+
+Can we do better? Yes, with neural based representation of words! </br>
+**Word2Vec** is a method to construct word embeddings to generate word representations that takes context into account. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**
 
 
 ## Information Extraction
