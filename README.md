@@ -6,6 +6,15 @@ In this document, I will discuss 4 fields in natural language processing:
 3. Machine Translation
 4. Text Mining
 
+Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. 
+**1. Dictionary** </br>
+This is a simple approach which essentially assign each word in a given training corpus to an integer. However, because of the ordinal value attached to each words, training models tend to assume that words associated with higher value have more importance which may lead to failure of the model.
+
+**2. One-Hot Encoding** </br>
+This method transforms each of the words in a given training corpus to a 1 x (N+1) dimensional vector, where N corresponds to the number of words in the corpus and the added 1 will be used to denote any words that are out of the training vocabulary. However, this method creates sparse matrix with huge dimensions which requires enormous computation power.
+
+
+
 ## Information Extraction
 Information extraction (IE) enables automated retrieval of specific information from text. IE depends on Name Entity Recognition to find targeted information to extract, such as LOCATION, PERSON, ORGANIZATION, etc. Once the entities are recognized, algorithms such as relationship extraction, co-reference resolution can then be used to extract its meaning.
 
@@ -158,8 +167,8 @@ Now to extract the event, we can pick out the "hero" story which is the article 
 As we can see, this technique was able to pick up articles talking about the same event. However, more fine-tuning is definitely needed since it classifies the presidential news in Zimbabwe and news related to President Donald Trump as the same event. And the "hero story" in this case is 
 <pre><code> U.S. President Donald Trump said on Monday that Japan would shoot North Korean missiles "out of the sky" if it bought the U.S. weaponry needed for doing so, suggesting Tokyo take a stance it has avoided until now.</code></pre>
 
-## Text Summarization
-To illustrate how text summarization works, we will use the same news dataset as before.
+## Text Summarization (single document vs. multidocument) ```https://arxiv.org/pdf/1903.10318.pdf```
+Summarization is the task of producing a shorter version of the original text while preserving its context and meaning. Since text summarization is a rather subjective task, using the automatic metrics such as ROUGE and METEOR have limitations to evaluate the fluency, grammaticality and coherence of the summarized text. Therefore, we cannot simply claim a state-of-art model based sole on the evaluation scores.
 ### 1. Extractive Summarization (Allahyari et al., 2017)
 Extractive summarization approach selects a subset of important sentences from the original text. All summarizers perform the following 3 independent tasks:
 ``` 
@@ -167,11 +176,16 @@ Extractive summarization approach selects a subset of important sentences from t
 2. Score the sentences based on the representation
 3. Select a summary comprising of the key sentences based on highest scoring.
 ```
+Though many neural models have been proposed for extractive summarization, one of the very recent paper that was published on March 25th, 2019 claims that a fine-tuned BERT(Bidirectional Encoder Representations from Transformers) model achieved state-of-art performance. For more information on the original BERT, see this Github repository: https://github.com/google-research/bert 
+For more information on the fine-tuned BERT model, please refer here: https://github.com/nlpyang/BertSum
+To illustrate how text summarization works, we will use the same news dataset as before.
 #### Feature based approach
 #### Graph based approach
 #### Topic representation approaches
 #### Knowledge bases and automatic summarization
 ### 2. Abstractive Summarization
+Contrary to the extractive approach, abstractive summarization is closer to how human would perform the task of summarization. In this paradigm, the summarized text contains words and phrases that were not necessarily in the original text, it is able to synthesize and generate a summary based on the original text. 
+Neural sequence-to-sequence models are the most common approach for abstractive text summarization.
 
 ## Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)
 Machine translation is one of the oldest AI subfields. It refers to the task of automatically converting one natural language into another, preserving the meaning of the input text, and producing fluent text in the output language. 
