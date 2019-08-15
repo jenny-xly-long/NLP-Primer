@@ -7,6 +7,7 @@ In this document, I will discuss 4 fields in natural language processing:
 4. Text Mining
 
 Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The mean idea is to transform words into numerical representations so that a computer can read it. </br>
+
 **1. Dictionary** </br>
 This is a simple approach which essentially assign each word in a given training corpus to an integer. However, because of the ordinal value attached to each words, training models tend to assume that words associated with higher value have more importance which may lead to failure of the model.
 
@@ -17,7 +18,18 @@ This method transforms each of the words in a given training corpus to a 1 x (N+
 One of the most used example is TF-IDF(Term Frequency-Inverse Document Frequency). This method takes the context and the words appearing in the context into consideration. This way, each sentence/document is represented by a unique vector depending on the number of occurrences of each word in the sentences/documents.
 
 Can we do better? Yes, with neural based representation of words! </br>
-**Word2Vec** is a method to construct word embeddings to generate word representations that takes context into account. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**
+
+**Word2Vec** is a method to construct word embeddings to generate word representations that takes context into account. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**. Essentially, Word2Vec is a 2-layer neural network. Its direct task is to predict the neighbouring words of a given word. The neural network takes as input one-hot encoded vectors representing each word in a corpus. The output of the network is a single vector containing, for every word in the input vocabulary, the probability that a randomly selected nearby word is this vocabulary word. The indirect task is to learn the weight matrix, which is ultimately th vector representation the corpus.
+
+So the most commonly used word embedding dimension is 300. This is not an arbitrary number, but rather a hyperparameter of the Word2Vec model. Through empirical experiment, 300 dimensional word embedding vectors perform the best. </br>
+
+![skip_gram_net_arch](https://user-images.githubusercontent.com/30851539/63123223-7c104d00-bf76-11e9-8b7c-d361891ecdd8.png) </br>
+
+So what does each dimension signify? The 300 dimensions correspond to the number of "neurons" in the hidden layer of the neural network. We can think of each dimension as a feature of the word. For example, the vector [King] would have features such as *royalty*, *masculinity*, *power*, *human*, ect.; the vector [man] would have features *masculinity*, *human*, etc. and [woman] would have features like *femininity*, *human*, etc. Therefore, by simple substraction, we get </br>
+  
+[Queen] = [King] - [man] + [woman] = *royalty*, *power*, *femininity*, *human*, etc. </br>
+
+**GLoVE (Global Vectors)** is another distributed word representation. While Word2Vec captures certain local context window, GloVe exploits overall co-occurrence statistics of words from corpus, which is a large collection of texts.
 
 
 ## Information Extraction
