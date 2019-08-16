@@ -19,11 +19,12 @@ One of the most used example is TF-IDF(Term Frequency-Inverse Document Frequency
 
 Can we do better? Yes, with neural based representation of words! </br>
 
-**Word2Vec** is a method to construct word embeddings to generate word representations that takes context into account. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**. Essentially, Word2Vec is a 2-layer neural network. Its direct task is to predict the neighbouring words of a given word. The neural network takes as input one-hot encoded vectors representing each word in a corpus. The output of the network is a single vector containing, for every word in the input vocabulary, the probability that a randomly selected nearby word is this vocabulary word. The indirect task is to learn the weight matrix, which is ultimately th vector representation the corpus.
+**Word2Vec** is a method to construct word embeddings to generate word representations. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**. Essentially, Word2Vec is a 2-layer neural network. Its direct task is to predict the neighbouring words of a given word. The neural network takes as input one-hot encoded vectors representing each word in a corpus. The output of the network is a single vector containing, for every word in the input vocabulary, the probability that a randomly selected nearby word is this vocabulary word. The indirect task is to learn the weight matrix, which is ultimately th vector representation the corpus.
 
 So the most commonly used word embedding dimension is 300. This is not an arbitrary number, but rather a hyperparameter of the Word2Vec model. Through empirical experiment, 300 dimensional word embedding vectors perform the best. </br>
 
 ![skip_gram_net_arch](https://user-images.githubusercontent.com/30851539/63123223-7c104d00-bf76-11e9-8b7c-d361891ecdd8.png) </br>
+(http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) </br>
 
 So what does each dimension signify? The 300 dimensions correspond to the number of "neurons" in the hidden layer of the neural network. We can think of each dimension as a feature of the word. For example, the vector [King] would have features such as *royalty*, *masculinity*, *power*, *human*, ect.; the vector [man] would have features *masculinity*, *human*, etc. and [woman] would have features like *femininity*, *human*, etc. Therefore, by simple substraction, we get </br>
   
@@ -31,6 +32,7 @@ So what does each dimension signify? The 300 dimensions correspond to the number
 
 **GLoVE (Global Vectors)** is another distributed word representation. While Word2Vec captures certain local context window, GloVe exploits overall co-occurrence statistics of words from corpus, which is a large collection of texts.
 
+Both Word2Vec and GLoVE incorporate semantic information and word similarities into their embeddings. However, these two methods have limitations when generalizing to words that were not in the original training corpus. Furthermore, if the same word has different meanings in different context, these 2 models do not differentiate the context, the word will have one embedding. To counter these shortcomings, the models ELMo (Embeddings from Language Models) and FastText can be used for high quality embeddings of words.
 
 ## Information Extraction
 Information extraction (IE) enables automated retrieval of specific information from text. IE depends on Name Entity Recognition to find targeted information to extract, such as LOCATION, PERSON, ORGANIZATION, etc. Once the entities are recognized, algorithms such as relationship extraction, co-reference resolution can then be used to extract its meaning.
