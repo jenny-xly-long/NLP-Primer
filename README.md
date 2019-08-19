@@ -19,7 +19,7 @@ One of the most used example is TF-IDF(Term Frequency-Inverse Document Frequency
 
 Can we do better? Yes, with neural based representation of words! </br>
 
-**Word2Vec** is a method to construct word embeddings to generate word representations. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**. Essentially, Word2Vec is a 2-layer neural network. Its direct task is to predict the neighbouring words of a given word. The neural network takes as input one-hot encoded vectors representing each word in a corpus. The output of the network is a single vector containing, for every word in the input vocabulary, the probability that a randomly selected nearby word is this vocabulary word. The indirect task is to learn the weight matrix, which is ultimately th vector representation the corpus.
+**Word2Vec** is a method to construct word embeddings to generate word representations. It generally uses 2 methods: **Skip Gram** and **Continuous Bag Of Words (CBOW)**. Essentially, Word2Vec is a 2-layer neural network. Its direct task is to predict the neighbouring words of a given word. The neural network takes as input one-hot encoded vectors representing each word in a corpus. The output of the network is a single vector containing, for every word in the input vocabulary, the probability that a randomly selected nearby word is this vocabulary word. The indirect task is to learn the weight matrix, which is ultimately th vector representation of the corpus.
 
 So the most commonly used word embedding dimension is 300. This is not an arbitrary number, but rather a hyperparameter of the Word2Vec model. Through empirical experiment, 300 dimensional word embedding vectors perform the best. </br>
 
