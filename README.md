@@ -229,3 +229,5 @@ In most statistical approches, the most crucial component of the system is the p
 
 ## Opinion Mining
 Sentiment analysis is one of the most known subfields of opinion mining. It is widely applied to reviews, survey responses in domains ranging from marketing to clinical medicine. Different classifiers can be employed to perform sentiment analysis. More traditional methods include Naive Bayes, Support Vector Machine, etc. Currently, deep learning techniques perform the best on sentiment analysis.
+
+# References
