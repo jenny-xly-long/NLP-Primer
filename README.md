@@ -232,5 +232,40 @@ Sentiment analysis is one of the most known subfields of opinion mining. It is w
 
 # References
 1. Daniel Jurafsky and James H. Martin. 2009. Speech and Language Processing (2nd Edition). Prentice-Hall, Inc., Upper Saddle River, NJ, USA. https://web.stanford.edu/~jurafsky/slp3/ed3book.pdf
-2. 
-
+2. Word Embeddings: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
+3. GLoVe embeddings: https://nlp.stanford.edu/pubs/glove.pdf
+4. Comparing Word2Vec with GLoVe: https://www.quora.com/How-is-GloVe-different-from-word2vec
+5. ELMo and deep contextualized word representation: https://arxiv.org/pdf/1802.05365.pdf
+6. Conditional random field: https://medium.com/ml2vec/overview-of-conditional-random-fields-68a2a20fa541
+7. Conditional random field: https://www.analyticsvidhya.com/blog/2018/08/nlp-guide-conditional-random-fields-text-classification/
+8. NER implemented with CRF: https://www.depends-on-the-definition.com/named-entity-recognition-conditional-random-fields-python/
+9. NER advances log: https://github.com/sebastianruder/NLP-progress/blob/master/english/named_entity_recognition.md
+10. A Survey on Recent Advances in NER frm Deep Learning models: https://www.aclweb.org/anthology/C18-1182
+11. Training spaCy's Statistical Models (e.g. NER, etc.): https://spacy.io/usage/training
+12. Survey of the State-of-the-Art keyphrase extraction: https://www.aclweb.org/anthology/P14-1119
+13. Information extraction through deep learning: https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada
+14. Keyword extraction through TextRank: https://towardsdatascience.com/textrank-for-keyword-extraction-by-python-c0bae21bcec0
+15. Automated keyword extraction: https://medium.com/analytics-vidhya/automated-keyword-extraction-from-articles-using-nlp-bfd864f41b34
+16. Topic modeling overview: https://www.analyticsvidhya.com/blog/2018/10/stepwise-guide-topic-modeling-latent-semantic-analysis/
+17. Understanding LSA for topic modeling: https://www.engr.uvic.ca/~seng474/svd.pdf
+18. Topic modeling with NLTK and Gensim: https://towardsdatascience.com/topic-modelling-in-python-with-nltk-and-gensim-4ef03213cd21
+19. Topic modeling, LDA: https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
+20. Different methods of topic modeling: https://medium.com/nanonets/topic-modeling-with-lsa-psla-lda-and-lda2vec-555ff65b0b05
+21. Original paper of LDA: http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
+22. Overview of event extraction: http://ceur-ws.org/Vol-779/derive2011_submission_1.pdf
+23. Good document to read about event detection techniques: https://tel.archives-ouvertes.fr/tel-01943841/document
+24. Simple event extraction implementation: https://towardsdatascience.com/natural-language-processing-event-extraction-f20d634661d3
+25. Great event extraction project/library on Github, but unfortunately cannot be implemented on Windows: https://github.com/fhamborg/Giveme5W1H
+26. Fuzzy string matching: https://towardsdatascience.com/natural-language-processing-for-fuzzy-string-matching-with-python-6632b7824c49
+27. Summarization with Pointer-Generator Networks: https://arxiv.org/pdf/1704.04368.pdf
+28. Literature review of Machine Translation: https://arxiv.org/pdf/1901.01122.pdf
+29. Neural machine translation implementation: https://towardsdatascience.com/neural-machine-translation-with-python-c2f0a34f7dd
+30. Understanding RNN: https://towardsdatascience.com/learn-how-recurrent-neural-networks-work-84e975feaaf7
+31. Understanding Encoder-Decoder, sequence-to-sequence model: https://towardsdatascience.com/learn-how-recurrent-neural-networks-work-84e975feaaf7
+32. Attention mechanism: https://arxiv.org/pdf/1706.03762.pdf
+33. How Transformers work: https://towardsdatascience.com/transformers-141e32e69591
+34. BERT explained: https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270
+35. BERT: http://jalammar.github.io/illustrated-b
+36. BERT: https://arxiv.org/pdf/1810.04805.pdf
+37. Google-research/BERT: https://github.com/google-research/bert
+38. Fine-tune BERT for Extractive Summarization: https://arxiv.org/pdf/1903.10318.pdf
