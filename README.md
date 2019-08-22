@@ -3,7 +3,10 @@
 ## Preliminaries
 This document discusses 4 fields in Natural Language Processing that are relevant to PSP Digital Innovation's project RADAR. The NLP primer surveys through various and some of the state-of-the-art techniques that can be employed to perform different functionalities of RADAR software, as well as it demonstrates some of the techniques through implementation. The way this document is currently strucutured aims mostly for internal use of PSP's Digital Innovation team so that we understand the foundation and the logic of different techniques and its performance. Nevertheless, the vision of the NLP primer does not limit to project RADAR nor for internal use only. Ideally, this document should be constantly maintained and the information should be kept up-to-date. Hopefully, different techniques and uses cases can also inspire other innovative initiatives within PSP. Finally, the information here can easily be extracted and put into other forms of presentation in the case we want to send it to other teams at PSP.
 
-If you wish to run the code of the demonstration presented in the NLP primer, you can do the following:
+If you wish to run the code of the demonstration presented in the NLP primer, you can do the following: </br>
+1. Download pre-trained word embeddings from spacy: https://spacy.io/models/en. In my code, I am using all 3 sizes (i.e. en_core_web_sm, en_core_web_md, en_core_web_lg)
+
+
 
 ** For whom that will continue working on NLP Primer: </br>
 This document is not finalized and potentially needs rewording, fine-tuning, etc. I outlined the different sections that I think is important to discuss but not all the information are properly presented under each section. I put down all the relevant resources/references that I consulted while making the NLP Primer where the information of the empty sections can be found. Additional information can also be found in the PowerPoints that I made which are linked here:
