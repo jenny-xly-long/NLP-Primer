@@ -1,5 +1,10 @@
 # NLP-Primer
-Natural Language Processing (NLP) is a tract of Artificial Intelligence and Linguistics devoted to make computers understand statements in human languages. Some useful text and speech processing includes conversational agent, dialogue system, machine translation, question answering, etc.
+
+## Preliminary
+This document discusses 4 fields in Natural Language Processing that are relevant to PSP Digital Innovation's project RADAR. The NLP primer aims to document and survey through varu
+
+Natural 
+ nguage Processing (NLP) is a tract of Artificial Intelligence and Linguistics devoted to make computers understand statements in human languages. Some useful text and speech processing includes conversational agent, dialogue system, machine translation, question answering, etc.
 In this document, I will discuss 4 fields in natural language processing:
 1. Information Extraction
 2. Text Summarization
