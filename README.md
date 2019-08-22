@@ -5,8 +5,8 @@ This document discusses 4 fields in Natural Language Processing that are relevan
 
 If you wish to run the code of the demonstration presented in the NLP primer, you can do the following:
 
-** For whom that will continue working on NLP Primer: 
-This document is not finalized and potentially needs rewording, fine-tuning, etc. I outlined the different sections that I think is important to discuss but not all the information are properly presented under each section. I put down all the relevant resources/references that I consulted while making the NLP Primer where the information of the empty sections can be found.
+** For whom that will continue working on NLP Primer: </br>
+This document is not finalized and potentially needs rewording, fine-tuning, etc. I outlined the different sections that I think is important to discuss but not all the information are properly presented under each section. I put down all the relevant resources/references that I consulted while making the NLP Primer where the information of the empty sections can be found. Additional information can also be found in the PowerPoints that I made which are linked here:
 
   * [Word Embeddings](#word-embeddings)
   * [Information Extraction](#information-extraction)
