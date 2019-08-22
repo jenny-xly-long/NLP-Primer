@@ -1,10 +1,44 @@
 # NLP-Primer
 
 ## Preliminary
-This document discusses 4 fields in Natural Language Processing that are relevant to PSP Digital Innovation's project RADAR. The NLP primer aims to document and survey through varu
+This document discusses 4 fields in Natural Language Processing that are relevant to PSP Digital Innovation's project RADAR. The NLP primer surveys through various and some of the state-of-the-art techniques that can be employed to perform different functionalities of RADAR software, as well as it demonstrates some of the techniques through implementation. The way this document is currently strucutured aims mostly for internal use of PSP's Digital Innovation team so that we understand the foundation and the logic of different techniques and its performance. Nevertheless, the vision of the NLP primer does not limit to project RADAR nor for internal use only. Ideally, this document should be constantly maintained and the information should be kept up-to-date. Hopefully, different techniques and uses cases can also inspire other innovative initiatives within PSP. Finally, the information here can easily be extracted and put into other forms of presentation in the case we want to send it to other teams at PSP.
 
-Natural 
- nguage Processing (NLP) is a tract of Artificial Intelligence and Linguistics devoted to make computers understand statements in human languages. Some useful text and speech processing includes conversational agent, dialogue system, machine translation, question answering, etc.
+If you wish to run the code of the demonstration presented in the NLP primer, you can do the following:
+
+** For whom that will continuing working on NLP Primer: 
+This document is not finalized and potentially needs rewording, fine-tuning, etc. I outlined the different sections that I think is important to discuss but not all the information are properly presented under each section. I put down all the relevant resources/references that I consulted while making the NLP Primer where the information of the empty sections can be found.
+
+  * [Word Embeddings](#word-embeddings)
+  * [Information Extraction](#information-extraction)
+    + [Name Entity Recognition (NER)](#name-entity-recognition--ner-)
+      - [1. Rule based](#1-rule-based)
+      - [2. Feature based](#2-feature-based)
+      - [3. Neural based](#3-neural-based)
+    + [Keyword Extraction (KE)](#keyword-extraction--ke-)
+      - [1. Using POS tagging and chunking](#1-using-pos-tagging-and-chunking)
+      - [2. Using TextRank](#2-using-textrank)
+      - [3. Unsupervised](#3-unsupervised)
+    + [Topic Modeling](#topic-modeling)
+      - [1. Latent Semantic Analysis (LSA)](#1-latent-semantic-analysis--lsa-)
+      - [2. Latent Dirichlet Allocation (LDA)](#2-latent-dirichlet-allocation--lda-)
+    + [Event Extraction (EE)](#event-extraction--ee-)
+  * [Text Summarization (single document vs. multidocument) ```https://arxiv.org/pdf/1903.10318.pdf```](#text-summarization--single-document-vs-multidocument-----https---arxivorg-pdf-190310318pdf---)
+    + [1. Extractive Summarization (Allahyari et al., 2017)](#1-extractive-summarization--allahyari-et-al--2017-)
+      - [Feature based approach](#feature-based-approach)
+      - [Graph based approach](#graph-based-approach)
+      - [Topic representation approaches](#topic-representation-approaches)
+      - [Knowledge bases and automatic summarization](#knowledge-bases-and-automatic-summarization)
+    + [2. Abstractive Summarization](#2-abstractive-summarization)
+  * [Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)](#machine-translation--mt---https---nlpstanfordedu-projects-mtshtml---https---arxivorg-pdf-190101122pdf-)
+    + [1. Rule based MT](#1-rule-based-mt)
+    + [2. Statistical based MT](#2-statistical-based-mt)
+    + [3. Neural based MT](#3-neural-based-mt)
+  * [Opinion Mining](#opinion-mining)
+- [References](#references)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+Natural Language Processing (NLP) is a tract of Artificial Intelligence and Linguistics devoted to make computers understand statements in human languages. Some useful text and speech processing includes conversational agent, dialogue system, machine translation, question answering, etc.
 In this document, I will discuss 4 fields in natural language processing:
 1. Information Extraction
 2. Text Summarization
@@ -13,6 +47,7 @@ In this document, I will discuss 4 fields in natural language processing:
 
 Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The mean idea is to transform words into numerical representations so that a computer can read it. </br>
 
+## Word Embeddings
 **1. Dictionary** </br>
 This is a simple approach which essentially assign each word in a given training corpus to an integer. However, because of the ordinal value attached to each words, training models tend to assume that words associated with higher value have more importance which may lead to failure of the model.
 
