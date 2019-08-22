@@ -1,11 +1,11 @@
 # NLP-Primer
 
-## Preliminary
+## Preliminaries
 This document discusses 4 fields in Natural Language Processing that are relevant to PSP Digital Innovation's project RADAR. The NLP primer surveys through various and some of the state-of-the-art techniques that can be employed to perform different functionalities of RADAR software, as well as it demonstrates some of the techniques through implementation. The way this document is currently strucutured aims mostly for internal use of PSP's Digital Innovation team so that we understand the foundation and the logic of different techniques and its performance. Nevertheless, the vision of the NLP primer does not limit to project RADAR nor for internal use only. Ideally, this document should be constantly maintained and the information should be kept up-to-date. Hopefully, different techniques and uses cases can also inspire other innovative initiatives within PSP. Finally, the information here can easily be extracted and put into other forms of presentation in the case we want to send it to other teams at PSP.
 
 If you wish to run the code of the demonstration presented in the NLP primer, you can do the following:
 
-** For whom that will continuing working on NLP Primer: 
+** For whom that will continue working on NLP Primer: 
 This document is not finalized and potentially needs rewording, fine-tuning, etc. I outlined the different sections that I think is important to discuss but not all the information are properly presented under each section. I put down all the relevant resources/references that I consulted while making the NLP Primer where the information of the empty sections can be found.
 
   * [Word Embeddings](#word-embeddings)
@@ -22,21 +22,20 @@ This document is not finalized and potentially needs rewording, fine-tuning, etc
       - [1. Latent Semantic Analysis (LSA)](#1-latent-semantic-analysis--lsa-)
       - [2. Latent Dirichlet Allocation (LDA)](#2-latent-dirichlet-allocation--lda-)
     + [Event Extraction (EE)](#event-extraction--ee-)
-  * [Text Summarization (single document vs. multidocument) ```https://arxiv.org/pdf/1903.10318.pdf```](#text-summarization--single-document-vs-multidocument-----https---arxivorg-pdf-190310318pdf---)
-    + [1. Extractive Summarization (Allahyari et al., 2017)](#1-extractive-summarization--allahyari-et-al--2017-)
+  * [Text Summarization](#text-summarization)
+    + [1. Extractive Summarization](#1-extractive-summarization)
       - [Feature based approach](#feature-based-approach)
       - [Graph based approach](#graph-based-approach)
       - [Topic representation approaches](#topic-representation-approaches)
       - [Knowledge bases and automatic summarization](#knowledge-bases-and-automatic-summarization)
     + [2. Abstractive Summarization](#2-abstractive-summarization)
-  * [Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)](#machine-translation--mt---https---nlpstanfordedu-projects-mtshtml---https---arxivorg-pdf-190101122pdf-)
+  * [Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)](#machine-translation)
     + [1. Rule based MT](#1-rule-based-mt)
     + [2. Statistical based MT](#2-statistical-based-mt)
     + [3. Neural based MT](#3-neural-based-mt)
   * [Opinion Mining](#opinion-mining)
 - [References](#references)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 Natural Language Processing (NLP) is a tract of Artificial Intelligence and Linguistics devoted to make computers understand statements in human languages. Some useful text and speech processing includes conversational agent, dialogue system, machine translation, question answering, etc.
 In this document, I will discuss 4 fields in natural language processing:
@@ -45,7 +44,7 @@ In this document, I will discuss 4 fields in natural language processing:
 3. Machine Translation
 4. Text Mining
 
-Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The mean idea is to transform words into numerical representations so that a computer can read it. </br>
+Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The main idea is to transform words into numerical representations so that a computer can read it. </br>
 
 ## Word Embeddings
 **1. Dictionary** </br>
@@ -141,10 +140,6 @@ Building on top of the TextRank idea, we can illustrate a keywords relation grap
 
 #### 3. Unsupervised
 
-
-
-
-
 ### Topic Modeling
 Topic modeling is an unsupervised technique to discover topics across various text documents. It has various applications in different domain. For instance, historians can use it to identify important events in history; web based libraries can use it to recommend books based on your past readings. News providers can leverage the technique to understand articles quickly or to group similar articles.
 
@@ -226,7 +221,7 @@ Now to extract the event, we can pick out the "hero" story which is the article 
 As we can see, this technique was able to pick up articles talking about the same event. However, more fine-tuning is definitely needed since it classifies the presidential news in Zimbabwe and news related to President Donald Trump as the same event. And the "hero story" in this case is 
 <pre><code> U.S. President Donald Trump said on Monday that Japan would shoot North Korean missiles "out of the sky" if it bought the U.S. weaponry needed for doing so, suggesting Tokyo take a stance it has avoided until now.</code></pre>
 
-## Text Summarization (single document vs. multidocument) ```https://arxiv.org/pdf/1903.10318.pdf```
+## Text Summarization (single document vs. multidocument to be added)
 Summarization is the task of producing a shorter version of the original text while preserving its context and meaning. Since text summarization is a rather subjective task, using the automatic metrics such as ROUGE and METEOR have limitations to evaluate the fluency, grammaticality and coherence of the summarized text. Therefore, we cannot simply claim a state-of-art model based sole on the evaluation scores.
 ### 1. Extractive Summarization (Allahyari et al., 2017)
 Extractive summarization approach selects a subset of important sentences from the original text. All summarizers perform the following 3 independent tasks:
@@ -243,7 +238,7 @@ To illustrate how text summarization works, we will use the same news dataset as
 The **Gensim** library uses the graph based approach to do text summarization. Here is text that we want to summarize:
 ```TOKYO (Reuters) - U.S. President Donald Trump said on Monday that Japan would shoot North Korean missiles “out of the sky” if it bought the U.S. weaponry needed for doing so, suggesting Tokyo take a stance it has avoided until now.North Korea is pursuing nuclear weapons and missile programs in defiance of U.N. Security Council sanctions and has made no secret of its plans to develop a missile capable of hitting the U.S. mainland. It has fired two missiles over Japan.Trump, speaking after a summit with Japanese Prime Minister Shinzo Abe, repeated his mantra the “era of strategic patience” with North Korea was over, and said the two countries were working to counter the “dangerous aggressions”.Trump also pressed Japan to lower its trade deficit with the United States and buy more U.S. military hardware.“He (Abe) will shoot them out of the sky when he completes the purchase of lots of additional military equipment from the United States,“ Trump said, referring to the North Korean missiles. ”The prime minister is going to be purchasing massive amounts of military equipment, as he should. And we make the best military equipment by far.”Abe, for his part, said Tokyo would shoot down missiles “if necessary”.Trump was replying to a question that was posed to Abe - namely how he would respond to a quote from Trump from a recent interview in which he said Japan was a “samurai” nation and should have shot down the North Korean missiles.Japan’s policy is that it would only shoot down a missile if it were falling on Japanese territory or if it were judged to pose an “existential threat” to Japan because it was aimed at a U.S. target.The U.S. president is on the second day of a 12-day Asian trip that is focusing on North Korea’s nuclear missile programs and trade.“Most importantly, we’re working to counter the dangerous aggressions of the regime in North Korea,” Trump said, calling Pyongyang’s nuclear tests and recent launches of ballistic missiles over Japan “a threat to the civilized world and to international peace and stability”.“Some people said that my rhetoric is very strong. But look what’s happened with very weak rhetoric over the last 25 years. Look where we are right now,” he added.North Korea’s recent actions have raised the stakes in the most critical international challenge of Trump’s presidency.The U.S. leader, who will visit South Korea on the trip, has rattled some allies with his vow to “totally destroy” North Korea if it threatens the United States and with his dismissal of North Korean leader Kim Jong Un as a “rocket man” on a suicide mission.Abe, with whom Trump has bonded through multiple summits and phone calls, repeated at the same news conference that Japan backed Trump’s stance that “all options” are on the table, saying it was time to exert maximum pressure on North Korea and the two countries were “100 percent” together on the issue.Chinese Foreign Ministry spokesman Hua Chunying, in response to Abe’s comments, said that the North Korean “situation” was “already extremely complex, sensitive and weak”.“We hope that under the present circumstances, all sides’ words and actions can help reduce tensions and reestablish mutual trust and getting the North Korean nuclear issue back on the correct track of dialogue and negotiations,” she said.TRADE DEFICITSWaiters hold U.S. President Donald Trump's Diet Coke as he delivers remarks before his toast to Japan's Prime Minister Shinzo Abe during an official dinner in Trump's honor at Akasaka Palace in Tokyo, Japan November 6, 2017. REUTERS/Jonathan ErnstTrump said he was committed to achieving “free, fair, and reciprocal” trade and wants to work with Japan on this issue.“America is also committed to improving our economic relationship with Japan,” Trump said. “As president, I‘m committed to achieving fair, free, and reciprocal trading relationship. We seek equal and reliable access for American exports to Japan’s markets in order to eliminate our chronic trade imbalances and deficits with Japan.”Earlier, speaking to Japanese and U.S. business executives, Trump praised Japan for buying U.S. military hardware.But he added that “many millions of cars are sold by Japan into the United States, whereas virtually no cars go from the United States into Japan”.Japan had a $69 billion trade surplus with the United States last year, according to the U.S. Treasury Department. The United States was Japan’s second biggest trade partner after China, while Japan was the United States’ fourth largest goods export market in 2016.EMPEROR, ABDUCTEESSlideshow (25 Images)Japanese officials have countered U.S. trade complaints by noting Tokyo accounts for a much smaller slice of the U.S. deficit than in the past, while China’s imbalance is bigger.In a second round of economic talks in Washington last month, U.S. Vice President Mike Pence and Japanese Finance Minister Taro Aso, who doubles as deputy premier, failed to bridge differences on trade issues.The two sides are at odds over how to frame future trade talks, with Tokyo pushing back against U.S. calls to discuss a bilateral free trade agreement.Trump also said earlier that an Indo-Pacific trade framework would produce more in trade that the Trans-Pacific Partnership pact pushed by his predecessor but which he announced Washington would abandon soon after he took office.The 11 remaining nations in the TPP, to which Japan’s Abe is firmly committed, are edging closer to sealing a comprehensive free trade pact without the United States.Trump met Emperor Akihito, exchanging a handshake and nodding, before his lunch and talks with Abe.He also met relatives of Japanese citizens abducted by North Korean agents decades ago to help train spies, calling the kidnappings a “tremendous disgrace” and pledging to work with Abe to bring the victims “back to Japan where they want to be”.“I think it would be a tremendous signal if Kim Jong Un would send them back,” Trump said. “If he would send them back, that would be the start of something, something very special.”Abe has made resolving the emotive abductions issue a keystone of his career. The families hope their talks with Trump - the third U.S. president they have met - will somehow contribute to a breakthrough, although experts say progress is unlikely.Abe also expressed his condolences for the victims of a gunman who massacred at least 26 worshippers at a church in Texas.White House spokeswoman Sarah Sanders said Trump had no plans to change the schedule for his 12-day Asian trip, which will also take him to Seoul, Beijing and Danang, Vietnam.```
 </br>
-Here is the summary:
+Here is the summary: </br>
 ```It has fired two missiles over Japan.Trump, speaking after a summit with Japanese Prime Minister Shinzo Abe, repeated his mantra the “era of strategic patience” with North Korea was over, and said the two countries were working to counter the “dangerous aggressions”.Trump also pressed Japan to lower its trade deficit with the United States and buy more U.S. military hardware.“He (Abe) will shoot them out of the sky when he completes the purchase of lots of additional military equipment from the United States,“ Trump said, referring to the North Korean missiles.\nAnd we make the best military equipment by far.”Abe, for his part, said Tokyo would shoot down missiles “if necessary”.Trump was replying to a question that was posed to Abe - namely how he would respond to a quote from Trump from a recent interview in which he said Japan was a “samurai” nation and should have shot down the North Korean missiles.Japan’s policy is that it would only shoot down a missile if it were falling on Japanese territory or if it were judged to pose an “existential threat” to Japan because it was aimed at a U.S. target.The U.S. president is on the second day of a 12-day Asian trip that is focusing on North Korea’s nuclear missile programs and trade.“Most importantly, we’re working to counter the dangerous aggressions of the regime in North Korea,” Trump said, calling Pyongyang’s nuclear tests and recent launches of ballistic missiles over Japan “a threat to the civilized world and to international peace and stability”.“Some people said that my rhetoric is very strong.```
 
 #### Topic representation approaches
@@ -252,7 +247,7 @@ Here is the summary:
 Contrary to the extractive approach, abstractive summarization is closer to how human would perform the task of summarization. In this paradigm, the summarized text contains words and phrases that were not necessarily in the original text, it is able to synthesize and generate a summary based on the original text. 
 Neural sequence-to-sequence models are the most common approach for abstractive text summarization.
 
-## Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)
+## Machine Translation (MT)  
 Machine translation is one of the oldest AI subfields. It refers to the task of automatically converting one natural language into another, preserving the meaning of the input text, and producing fluent text in the output language. 
 ### 1. Rule based MT
 This is the primary research focus in 1970s. This approach consists of the following steps:
@@ -296,7 +291,7 @@ Sentiment analysis is one of the most known subfields of opinion mining. It is w
 23. Good document to read about event detection techniques: https://tel.archives-ouvertes.fr/tel-01943841/document
 24. Simple event extraction implementation: https://towardsdatascience.com/natural-language-processing-event-extraction-f20d634661d3
 25. Great event extraction project/library on Github, but unfortunately cannot be implemented on Windows: https://github.com/fhamborg/Giveme5W1H
-26. Fuzzy string matching: https://towardsdatascience.com/natural-language-processing-for-fuzzy-string-matching-with-python-6632b7824c49
+26. Survey of text summarization techniques: https://arxiv.org/pdf/1707.02268.pdf
 27. Summarization with Pointer-Generator Networks: https://arxiv.org/pdf/1704.04368.pdf
 28. Literature review of Machine Translation: https://arxiv.org/pdf/1901.01122.pdf
 29. Neural machine translation implementation: https://towardsdatascience.com/neural-machine-translation-with-python-c2f0a34f7dd
