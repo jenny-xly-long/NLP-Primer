@@ -42,7 +42,7 @@ In this document, I will discuss 4 fields in natural language processing:
 1. Information Extraction
 2. Text Summarization
 3. Machine Translation
-4. Text Mining
+4. Opinion Mining
 
 Before we start to talk about the 4 subfields, let's first discuss the different representations of words in NLP. The main idea is to transform words into numerical representations so that a computer can read it. </br>
 
