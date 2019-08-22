@@ -29,7 +29,7 @@ This document is not finalized and potentially needs rewording, fine-tuning, etc
       - [Topic representation approaches](#topic-representation-approaches)
       - [Knowledge bases and automatic summarization](#knowledge-bases-and-automatic-summarization)
     + [2. Abstractive Summarization](#2-abstractive-summarization)
-  * [Machine Translation (MT) (https://nlp.stanford.edu/projects/mt.shtml) (https://arxiv.org/pdf/1901.01122.pdf)](#machine-translation)
+  * [Machine Translation (MT)](#machine-translation)
     + [1. Rule based MT](#1-rule-based-mt)
     + [2. Statistical based MT](#2-statistical-based-mt)
     + [3. Neural based MT](#3-neural-based-mt)
